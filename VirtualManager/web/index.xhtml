@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <f:view>
+        <head>     <!-- carregar pacote -->
+            <f:loadBundle
+                basename="br.com.vm.mensagens"
+                var="msgs" />
+            <title>
+                <h:outputText value="#{msgs.Titulo1}"/>
+            </title>
+            <link rel="stylesheet" href="css/base.css"/>
+           <!-- <link rel="stylesheet" href="css/skeleton.css"/> 
+            <link rel="stylesheet" href="css/layout.css"/> -->
+        </head>
+        <h:body>
+            <h:form><center>
+                    <h3><center>:. Usuários Cadastrados.: </center></h3>
+                    <!-- chama o método cadastrar de agenda que retorna cadastrar para o faces, que chama a página incluir.jsp -->
+                    <h:commandButton value="Cadastrar Usuario" action="#{agenda.cadastrar}" ></h:commandButton></center>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+

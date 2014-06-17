@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+    <managed-bean>
+        <managed-bean-name>agenda</managed-bean-name>
+        <managed-bean-class>br.com.vm.UsuarioBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>*</from-view-id> <!-- saindo de qualquer luagar -->
+        <navigation-case>
+            <from-outcome>cadastrar</from-outcome> <!-- é um apelido, ou seja "cadastrar" vai para (incluir.jsp)... -->
+            <to-view-id>/incluir.jsp</to-view-id> <!-- indica que página o apelido voltar vai chamar, ou seja, index.jsp -->
+        </navigation-case>                        <!-- mas tem que ter um método no bean para retornar esse nome (cadastrar) -->
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id> <!-- //saindo de qualquer luagar -->
+        <navigation-case>
+            <from-outcome>editar</from-outcome>
+            <to-view-id>/alterar.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>voltar</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
