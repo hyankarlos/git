@@ -13,6 +13,7 @@ body {
 div.organograma {
     width:970px;
     overflow:auto;
+    margin: 50px auto auto auto;
 }
 div.organograma * {
     position:relative;
@@ -83,7 +84,7 @@ div.organograma>ul>li>ul>li>ul>li {
     padding-left:10px;
     background-position: -95px -570px;
     width:165px;
-    margin-bottom:-4px;
+    margin-bottom:-8px;
     overflow:auto;
     z-index:999;
 }
@@ -112,11 +113,11 @@ div.organograma>ul>li>ul>li>ul>li a {
     padding-left:100px;
 }
 
-#wrapper {
-    margin: 8px auto;
-    min-width: 540px;/* Aqui colocas a largura mínima que pretendes */
-    max-width: 1024px;/* Aqui colocas a largura máxima que pretendes */
-}
+/*#wrapper {
+    margin:50px auto;
+    min-width: 540px;// Aqui colocas a largura mínima que pretendes 
+    max-width: 1024px;// Aqui colocas a largura máxima que pretendes 
+} */
 
 
 //Menu drop down estilizado
